@@ -15,18 +15,18 @@ Gem::Specification.new do |gem|
   gem.name          = "uberspacify"
   gem.require_paths = ["lib"]
   gem.version       = Uberspacify::VERSION
-  
+
   # dependencies for capistrano
-  gem.add_dependency 'capistrano',        '>=2.12.0'
+  gem.add_dependency 'capistrano',        '>=2.12.0', '<3.0.0'
   gem.add_dependency 'capistrano_colors', '>=0.5.5'
   gem.add_dependency 'rvm-capistrano',    '>=1.2.5'
-  
+
   # dependencies for passenger on Uberspace
   gem.add_dependency 'passenger',         '>=3.0.15'
   gem.add_dependency 'rack',              '>=1.4.1'
   gem.add_dependency 'daemon_controller', '>=1.0.0'
-  
-  # dependency for mysql on Uberspace
-  gem.add_dependency 'mysql2',            '>=0.3.11'
-  
+
+  # dependency for pg on Uberspace
+  gem.add_dependency 'pg',                '>=0.17.1'
+
 end

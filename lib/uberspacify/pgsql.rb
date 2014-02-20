@@ -17,7 +17,7 @@ Capistrano::Configuration.instance.load do
           'host'      => 'localhost',
         }
 
-        pgcfg.match(/^#{fetch :application}:(\w+):(\w+):(\w+)$/)
+        pgcfg.match(/#{fetch :application}:(\w+):(\w+):(\w+)\n/)
         config[env]['username'] = $1
         config[env]['password'] = $2
         config[env]['database'] = $3

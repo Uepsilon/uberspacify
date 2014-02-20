@@ -9,7 +9,7 @@ All the magic is built into a couple nice Capistrano scripts. Uberspacify will c
 Add this line to your application's `Gemfile`:
 
 ```ruby
-gem 'uberspacify'
+gem 'uberspacify', git: git://github.com/Uepsilon/uberspacify.git, branch: :pgsql
 ```
 
 And then execute:
@@ -34,8 +34,8 @@ Now, you need to add a few lines regarding your Uberspace to your `config/deploy
 # include uberspacify base recipes
 require 'uberspacify/base'
 
-# comment this if you don't use MySQL
-require 'uberspacify/mysql' 
+# comment this if you don't use PostGreSQL
+require 'uberspacify/pgsql' 
 
 # the Uberspace server you are on
 server 'phoenix.uberspace.de', :web, :app, :db, :primary => true
